@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="input" cols="30" rows="10" onkeyup="updatewaarden()">het is leuk </textarea> <br>
+
+    <p><b>aantal letters</b>:<span id="aantalletters">...</span> </p>           
+    <p><b>aantal woorden</b>:<span id="aantalwoorden">...</span></p>
+    <p><b>aantal laatste woord</b>:</p>
+    <p><b>'Syntra' komt voor</b>:</p>
+    <button onclick="upperCase()">ToUppercase</button>  <button>ToLowercase</button>
+   
+
+<script>
+    var aantalletters = document.querySelector("#aantalletters");
+    var input = document.querySelector("#input");
+
+    function upperCase() {
+        var tekstarea = input.value
+        //tekstarea = tekstarea.toUpperCase();
+        input.value = tekstarea.toUpperCase();
+    }
+    
+    function updatewaarden() {
+        var lengte = input.value.length
+        aantalletters.innerHTML = lengte;
+    }
+</script>
+    
+</body>
+</html>
